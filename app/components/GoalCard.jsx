@@ -193,9 +193,9 @@ class GoalCard extends Component {
     return extraFields;
   }
 
-  renderAddStepToGoalModal(addStepToGoalModalParameters) {
+  renderAddStepToGoalModal() {
     const { goal } = this.state;
-    const { actions } = this.props;
+    const { actions, addStepToGoalModalParameters } = this.props;
     const modalParams = {
       ...goal,
       ...addStepToGoalModalParameters,
@@ -244,7 +244,6 @@ class GoalCard extends Component {
     const {
       goal,
       loading,
-      addStepToGoalModalParameters,
     } = this.props;
 
     const achieved = goal.achieved;
@@ -273,7 +272,7 @@ class GoalCard extends Component {
             <span style={styles.dueDate}><i className="icon-history" /> {dueDays}</span>
           </div>
           {this.renderGoalModal()}
-          {this.renderAddStepToGoalModal(addStepToGoalModalParameters)}
+          {this.renderAddStepToGoalModal()}
         </Paper>
       </Loading>
     );
