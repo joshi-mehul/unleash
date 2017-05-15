@@ -248,7 +248,7 @@ class GoalCard extends Component {
       goal,
       loading,
     } = this.props;
-
+    console.log('goal', goal);
     const achieved = goal.achieved;
     const dueDays = goal.dueDate ? this.daysLeft(goal.dueDate) : 0;
     const inProgress = !goal.achieved && goal.dueDate;
