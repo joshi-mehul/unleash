@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppBar from 'material-ui/AppBar';
+import { AppBar } from 'unleash-styles';
 import Drawer from 'material-ui/Drawer';
 import MaterialUIMenu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';

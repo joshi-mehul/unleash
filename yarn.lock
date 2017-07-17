@@ -2377,6 +2377,12 @@ eslint-module-utils@^2.0.0:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
+eslint-plugin-flowtype@^2.35.0:
+  version "2.35.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.35.0.tgz#d17494f0ae8b727c632d8b9d4b4a848e7e0c04af"
+  dependencies:
+    lodash "^4.15.0"
+
 eslint-plugin-import@^2.1.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.6.0.tgz#2a4bbad36a078e052a3c830ce3dfbd6b8a12c6e5"
@@ -2739,6 +2745,10 @@ flat-cache@^1.2.1:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
+
+flow-bin@^0.50.0:
+  version "0.50.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.50.0.tgz#d4cdb2430dee1a3599f0eb6fe551146e3027256a"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -6301,9 +6311,9 @@ uniqs@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/uniqs/-/uniqs-2.0.0.tgz#ffede4b36b25290696e6e165d4a59edb998e6b02"
 
-unleash-styles@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unleash-styles/-/unleash-styles-1.0.0.tgz#c08d0ee058a3f18b90e80eb56a07803905305117"
+unleash-styles@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unleash-styles/-/unleash-styles-1.0.1.tgz#cd524cea5ef3de8537f0f5975563b3bb6b502e6a"
   dependencies:
     classnames "^2.2.5"
     enzyme "^2.9.1"
