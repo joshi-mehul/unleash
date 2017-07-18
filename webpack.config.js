@@ -4,6 +4,8 @@ const path = require('path');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ConfigPlugin = require('config-webpack-plugin');
+const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
+const FlowWebpackPlugin = require('flow-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProduction = nodeEnv === 'production';
@@ -19,14 +21,6 @@ const plugins = [
       NODE_ENV: JSON.stringify(nodeEnv),
     },
   }),
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    filename: 'vendor-[hash].js',
-    minChunks(module) {
-      const context = module.context;
-      return context && context.indexOf('node_modules') >= 0;
-    },
-  }),
   new webpack.NamedModulesPlugin(),
   new HtmlWebpackPlugin({
     template: path.join(__dirname, 'index.html'),
@@ -34,6 +28,8 @@ const plugins = [
     filename: 'index.html',
   }),
   new ConfigPlugin(['./config.js', './config.local.js']),
+  new FlowBabelWebpackPlugin(),
+  new FlowWebpackPlugin(),
 ];
 
 // Common rules
@@ -47,7 +43,11 @@ const rules = [
     },
   },
   {
-    test: /\.(js|jsx)$/,
+    test: /\.js$/,
+    loader: 'babel',
+  },
+  {
+    test: /\.(jsx)$/,
     exclude: /node_modules/,
     use: {
       loader: 'babel-loader',
