@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { AppBar } from 'unleash-styles';
+import * as components from 'unleash-styles';
 import { routerShape } from 'react-router/lib/PropTypes';
 
-console.log('APPBAR', AppBar);
+console.log('COMPONENTS', components.default);
+
 class Menu extends Component {
   handleMenuClick() {
     console.log('this ...');
@@ -10,7 +11,7 @@ class Menu extends Component {
 
   render() {
     return (
-      <AppBar />
+      <div>test</div>
     );
   }
 }
